@@ -1,1 +1,1 @@
-"# log_app"
+Simple log app

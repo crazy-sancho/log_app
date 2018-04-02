@@ -4,7 +4,7 @@ $(document).ready( function () {
 
     const today_date = moment().format('DD.MM.YYYY');
     const container = $('#pagination');
-    let theData, copyData, removeData, i, j, theList;
+    let theData, copyData, i, j, theList;
 
     // disable submit if both inputs empty
     let taskInput = $('.task-input');
@@ -50,6 +50,7 @@ $(document).ready( function () {
                             addData[i].date_hm = date_hm;
                             // add new entry to the beginning of an array
                             copyData.unshift(addData[i]);
+
                         }
 
                         // send new entry to array as new array
@@ -64,7 +65,7 @@ $(document).ready( function () {
         }
 
         function removeRow() {
-            $('.remove-btn').on('click', function(e) {
+            $(document).on('click', '.remove-btn', function(e) {
 
                 e.preventDefault();
 
@@ -75,10 +76,10 @@ $(document).ready( function () {
                     data: {id: task_id},
                     success: function(){
 
-                        removeData = data.filter(function(obj) {
+                        copyData = data.filter(function(obj) {
                             return obj.id !== task_id;
                         });
-                        data = removeData;
+                        data = copyData;
                         callPagination();
 
                     }

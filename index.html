@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task app</title>
+    <link rel="stylesheet" href="./css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/solid.css" integrity="sha384-29Ax2Ao1SMo9Pz5CxU1KMYy+aRLHmOu6hJKgWiViCYpz3f9egAJNwjnKGgr+BXDN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/pagination.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/lodash.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="formbar">
+        <form action="" id="add-post" method="post">
+            <label for="task-name">Task description</label>
+            <input id="task-name" class="task-input"  name="task-name" type="text" placeholder="Description" value="" />
+            <label for="task-time">Time spent</label>
+            <input id="task-time" class="task-input" name="task-time" type="text" placeholder="Time spent" value="" />
+
+            <input id="submit" name="submit" type="submit" value="add" disabled="disabled" />
+        </form>
+    </div>
+    <div id="tasks" class="posts">
+    </div>
+    <div id="pagination" class="posts">
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
